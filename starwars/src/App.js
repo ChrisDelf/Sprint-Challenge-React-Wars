@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import './App.css';
-
+import GridComp from './components/gridComp';
+import {Header, Table} from 'semantic-ui-react'
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
@@ -26,7 +27,8 @@ const App = () => {
   [] )
   return (
     <div className="App">
-      <h1 className="Header">React Wars</h1>
+    <h1 className="Header">React Wars</h1>
+    <GridComp/>
     </div>
   );
 }

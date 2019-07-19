@@ -23,13 +23,10 @@ const App = () => {
     });
   }, []);
 
-
-
-
   return (
     <div className="App">
       <h1 className="Header">React Wars</h1>
-      <GridComp starWarsData= {starWarsData} key={starWarsData} />
+      <GridComp starWarsData={starWarsData} key={starWarsData} />
     </div>
   );
 };

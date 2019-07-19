@@ -7,6 +7,7 @@ import GridCard from './gridCard';
 
 
 
+
 function GridComp(props) {
   const {starWarsData} = props;
   console.log("Data in Grid", props)
@@ -15,15 +16,18 @@ function GridComp(props) {
       <Table.Header>
         <Table.Row>
           <Table.HeaderCell singleLine>Name</Table.HeaderCell>
+          <Table.HeaderCell>Birth Year</Table.HeaderCell>
+          <Table.HeaderCell>Vehicles</Table.HeaderCell>
+          <Table.HeaderCell>Home World</Table.HeaderCell>
           <Table.HeaderCell>Description</Table.HeaderCell>
-          <Table.HeaderCell>BirthDay</Table.HeaderCell>
-          <Table.HeaderCell>Year of Creation</Table.HeaderCell>
-          <Table.HeaderCell>Comments</Table.HeaderCell>
         </Table.Row>
       </Table.Header>
 
-      <Table.Body>
-        <GridCard />
+    <Table.Body>
+    {starWarsData.map((item, index) => (
+        <GridCard key={index} name={item}/>
+       ))}
+
       </Table.Body>
     </Table>
   );

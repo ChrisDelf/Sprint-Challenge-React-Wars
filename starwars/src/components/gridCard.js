@@ -1,31 +1,31 @@
 import React from 'react';
-import {Header, Table, Rating} from 'semantic-ui-react'
+import { Header, Table, Rating } from 'semantic-ui-react';
 
-function GridCard () {
+function GridCard(props) {
+  console.log('In Card Comp', props);
 
-
-return(
- <Table.Row>
-        <Table.Cell>
-          <Header as='h2' textAlign='center'>
-            A
-          </Header>
-        </Table.Cell>
-        <Table.Cell singleLine>Power Output</Table.Cell>
-        <Table.Cell>
-          <Rating icon='star' defaultRating={3} maxRating={3} />
-        </Table.Cell>
-        <Table.Cell textAlign='right'>
-          80% <br />
-          <a href='#'>18 studies</a>
-        </Table.Cell>
-        <Table.Cell>
-          Creatine supplementation is the reference compound for increasing muscular creatine
-          levels; there is variability in this increase, however, with some nonresponders.
-        </Table.Cell>
-      </Table.Row>
-
-)
+  return (
+    <Table.Row>
+      <Table.Cell>
+        <Header as="h2" textAlign="center">
+          {props.name.name}
+        </Header>
+      </Table.Cell>
+      <Table.Cell>Birth Year: {props.name.birth_year}</Table.Cell>
+      <Table.Cell>PLACEHOLDER</Table.Cell>
+      <Table.Cell>PLACEHOLDER</Table.Cell>
+      <Table.Cell>
+        <ul>
+          <li>Eye color: {props.name.eye_color}</li>
+          <li>Haircolor: {props.name.hair_color}</li>
+          <li>Height: {props.name.height}</li>
+          <li>Skin color: {props.name.skin_color}</li>
+          <li>Mass: {props.name.mass}</li>
+          <li>Gender: {props.name.gender}</li>
+        </ul>
+      </Table.Cell>
+    </Table.Row>
+  );
 }
 
 export default GridCard;

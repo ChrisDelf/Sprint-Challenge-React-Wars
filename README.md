@@ -25,14 +25,21 @@ In this challenge, create a web page that presents a styled list of Star Wars ch
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] What is React JS and what problems does it try and solve? Support your answer with concepts introduced in class and from your personal research on the web.
+It makes it easier to make a reactive UI that updates when new data comes in.
+- [ ] What does it mean to _think_ in react?- its a process which we map out app.
 
-- [ ] What does it mean to _think_ in react?
+1.Break The UI Into A Component Hierarchy
+2.Build A Static Version in React
+3.Identify The Minimal (but complete) Representation of UI State
+4.Identify Where Your State Should Live
+5.Add Inverse Data Flow
+- [ ] Describe state.-State where you data is stored in app.
 
-- [ ] Describe state.
+- [ ] Describe props.- Props represent your objects that you pass around to other components.
 
-- [ ] Describe props.
-
-- [ ] What are side effects, and how do you sync effects in a React component to state or prop changes?
+- [ ] What are side effects, and how do you sync effects in a React component to state or prop changes? - Since it
+    updates whenever data changes it creates an infinite loop. It can also cause dysnc. You nest what ever you want to
+    run inside of it and give one of its parameters and empty array.
 
 ## Project Set Up
 
@@ -60,7 +67,7 @@ Follow these steps for completing your project:
 
 Your finished project must include all of the following requirements:
 
-- [ ] Fetch a list of Star Wars characters from the [Star Wars API (or SWAPI)](https://swapi.co/) and render them to the screen. 
+- [ ] Fetch a list of Star Wars characters from the [Star Wars API (or SWAPI)](https://swapi.co/) and render them to the screen.
 - [ ] Follow the documentation to learn how to fetch a list of "people". However, don't spend _too_ long on this. Here is a link for you to follow if you've looked around the docs for about 15 minutes or so and haven't found where to go - [Secret Link to Awesomeness 🤫](https://swapi.co/documentation#people).
 - [ ] Set the data you fetch to state.
 - [ ] Map over the list and render a component for each character on the page.
